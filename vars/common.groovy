@@ -4,11 +4,11 @@ def call(String stageName){
      {
        sh "mvn clean package"
      }
-  else if ("${stageName}" == "SonarQube Report")
+  else if ("${stageName}" == "Sonar")
      {
        sh "mvn clean sonar:sonar"
      }
-  else if ("${stageName}" == "Upload Into Nexus")
+  else if ("${stageName}" == "Nexus")
      {
        sh "mvn clean deploy"
      }
